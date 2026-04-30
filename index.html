@@ -116,7 +116,6 @@ const steps = [
         <div class="kit-item"><div class="kit-icon">🪵</div><div class="kit-name">Wooden Dowel</div><div class="kit-detail">1 × 6 inches</div></div>
         <div class="kit-item"><div class="kit-icon">🧵</div><div class="kit-name">Cotton Cords</div><div class="kit-detail">8 × 45 inches</div></div>
       </div>
-      <div class="tip"><strong>💡 Tip:</strong> Lay all your cords out flat and straighten them before you begin. This makes mounting much easier.</div>`
   },
   {
     badge:'mounting', badgeLabel:'Mounting',
@@ -197,14 +196,16 @@ const steps = [
     title:'Row 3 — Continuing Inward',
     desc:'Continue narrowing inward. The diamond shape is now becoming visible.',
     render:()=>`
-      <div class="row-badge">Row 3 · 2 Square Knots</div>
-      <div class="diagram"><div class="icon">🪢</div><div>Diagram: Row 3 offset from Row 2, strands 1–4 and 13–16 hanging free</div><div class="label">Strands 5–12 active</div></div>
-      <p style="font-size:14px;line-height:1.65;margin-bottom:14px;color:var(--text)">Leave strands <span class="mono">1–4</span> and <span class="mono">13–16</span> hanging free. Group strands 5–12 into <strong style="color:var(--brown)">2 groups of 4</strong>:</p>
+      <div class="row-badge">Row 3 · 4 Square Knots</div>
+      <div class="diagram"><div class="icon">🪢</div><div>Diagram: Row 3 offset from Row 2</div><div class="label">Strands 1–16 active</div></div>
+      <p style="font-size:14px;line-height:1.65;margin-bottom:14px;color:var(--text)">Group strands 1–16 into <strong style="color:var(--brown)">4 groups of 4</strong>:</p>
       <table class="strand-table">
         <thead><tr><th>Knot</th><th>Working Cords</th><th>Filler Cords</th></tr></thead>
         <tbody>
-          <tr><td><strong>SK 1</strong></td><td><span class="mono">5</span> &amp; <span class="mono">8</span></td><td><span class="mono">6</span> &amp; <span class="mono">7</span></td></tr>
-          <tr><td><strong>SK 2</strong></td><td><span class="mono">9</span> &amp; <span class="mono">12</span></td><td><span class="mono">10</span> &amp; <span class="mono">11</span></td></tr>
+          <tr><td><strong>SK 1</strong></td><td><span class="mono">1</span> &amp; <span class="mono">4</span></td><td><span class="mono">2</span> &amp; <span class="mono">3</span></td></tr>
+          <tr><td><strong>SK 2</strong></td><td><span class="mono">5</span> &amp; <span class="mono">8</span></td><td><span class="mono">6</span> &amp; <span class="mono">7</span></td></tr>
+          <tr><td><strong>SK 3</strong></td><td><span class="mono">9</span> &amp; <span class="mono">12</span></td><td><span class="mono">10</span> &amp; <span class="mono">11</span></td></tr>
+          <tr><td><strong>SK 4</strong></td><td><span class="mono">13</span> &amp; <span class="mono">16</span></td><td><span class="mono">14</span> &amp; <span class="mono">15</span></td></tr>
         </tbody>
       </table>`
   },
@@ -229,16 +230,18 @@ const steps = [
   {
     badge:'pattern', badgeLabel:'Pattern · Row 5',
     title:'Row 5 — Continuing to Widen',
-    desc:'This row mirrors Row 3.',
+    desc:'This row matches Row 3.',
     render:()=>`
-      <div class="row-badge">Row 5 · 2 Square Knots</div>
-      <div class="diagram"><div class="icon">🪢</div><div>Diagram: Row 5 offset from Row 4</div><div class="label">Strands 5–12 active (same as Row 3)</div></div>
-      <p style="font-size:14px;line-height:1.65;margin-bottom:14px;color:var(--text)">Use strands 5–12, grouped into <strong style="color:var(--brown)">2 groups of 4</strong> — same as Row 3:</p>
+      <div class="row-badge">Row 5 · 4 Square Knots</div>
+      <div class="diagram"><div class="icon">🪢</div><div>Diagram: Row 3 offset from Row 2</div><div class="label">Strands 1–16 active</div></div>
+      <p style="font-size:14px;line-height:1.65;margin-bottom:14px;color:var(--text)">Group strands 1–16 into <strong style="color:var(--brown)">4 groups of 4</strong>:</p>
       <table class="strand-table">
         <thead><tr><th>Knot</th><th>Working Cords</th><th>Filler Cords</th></tr></thead>
         <tbody>
-          <tr><td><strong>SK 1</strong></td><td><span class="mono">5</span> &amp; <span class="mono">8</span></td><td><span class="mono">6</span> &amp; <span class="mono">7</span></td></tr>
-          <tr><td><strong>SK 2</strong></td><td><span class="mono">9</span> &amp; <span class="mono">12</span></td><td><span class="mono">10</span> &amp; <span class="mono">11</span></td></tr>
+          <tr><td><strong>SK 1</strong></td><td><span class="mono">1</span> &amp; <span class="mono">4</span></td><td><span class="mono">2</span> &amp; <span class="mono">3</span></td></tr>
+          <tr><td><strong>SK 2</strong></td><td><span class="mono">5</span> &amp; <span class="mono">8</span></td><td><span class="mono">6</span> &amp; <span class="mono">7</span></td></tr>
+          <tr><td><strong>SK 3</strong></td><td><span class="mono">9</span> &amp; <span class="mono">12</span></td><td><span class="mono">10</span> &amp; <span class="mono">11</span></td></tr>
+          <tr><td><strong>SK 4</strong></td><td><span class="mono">13</span> &amp; <span class="mono">16</span></td><td><span class="mono">14</span> &amp; <span class="mono">15</span></td></tr>
         </tbody>
       </table>`
   },
@@ -471,9 +474,9 @@ function patternOverviewSVG() {
   const rowDefs = [
     { starts:[1,5,9,13], label:'Row 1', color:'#c4714a' },
     { starts:[3,7,11],   label:'Row 2', color:'#7a9e87' },
-    { starts:[5,9],      label:'Row 3', color:'#c4714a' },
+    { starts:[1,5,9,13], label:'Row 3', color:'#c4714a' },
     { starts:[3,7,11],   label:'Row 4', color:'#7a9e87' },
-    { starts:[5,9],      label:'Row 5', color:'#c4714a' },
+    { starts:[1,5,9,13], label:'Row 5', color:'#c4714a' },
     { starts:[3,7,11],   label:'Row 6', color:'#7a9e87' },
     { starts:[5,9],      label:'Row 7', color:'#c4714a' },
     { starts:[7],        label:'Row 8', color:'#6b4c35' },
